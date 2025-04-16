@@ -1,0 +1,330 @@
+/* Global body styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.helpbar-container {
+    box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
+    background-color: #333333;
+    color: #ffffff;
+    padding: 1.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Flex align page content */
+.page-content {
+    display: flex;
+    flex-direction: column;
+    margin: 1.1rem 0;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 1rem;
+}
+
+/* Bold the "Tristan McCaskill" text */
+.name-display {
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    background: none;
+    color: #ffffff;
+    font-size: 2.2rem;
+    display: inline;
+    cursor: pointer;
+}
+
+.desktop-nav-links {
+    display: none;
+}
+
+header {
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+/* Mobile nav links hidden by default */
+.mobile-nav-links {
+    display: flex;
+    position: absolute;
+    background-color: #333333;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-100%); 
+    visibility: hidden; /* Hide the menu initially */
+    /* Add a smooth transition effect for dropdown */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 5;
+    opacity: 0;
+    top: 100%;
+    right: 0;
+    left: 0;
+}
+
+/* When the nav is visible, expand the menu */
+.mobile-nav-links-visible {
+    opacity: 1;
+    transform: translateY(0); /* Menu moves down */
+}
+
+/* Navigation list items spacing (update to flex later) */
+.mobile-nav-links li, .desktop-nav-links li {
+    margin: 0.6rem;
+}
+
+/* Style links inside both desktop and mobile nav */
+.nav-links li a {
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Style the hero element */
+#hero {
+    box-sizing: border-box;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 3.1rem 0;
+    background: #222222;
+    color: #ffffff;
+    border-radius: 1rem;
+    max-width: 95%;
+}
+
+#hero h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+#hero h3 {
+    color: #cccccc;
+    font-size: 1rem;
+    margin: 0.6rem;
+}
+
+/* Style general paragraph elements */
+p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
+
+/* Style the about text (slightly larger) */
+#about p {
+    margin: 0.75rem 0rem;
+    line-height: 2rem;
+}
+
+/* Style section container class generally */
+.section-container {
+    border-radius: 1rem;
+    background-color: #ffffff;
+    box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1.6rem;
+    font-size: 1.3rem;
+    width: 95%;
+}
+
+.section-container h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Grid align and style skills section */
+#skills-icons {
+    display: grid;
+    --icon-size: 4rem;
+    grid-template-columns: repeat(auto-fit, var(--icon-size));
+    row-gap: 3.5rem;
+    column-gap: 2rem;
+    justify-content: space-evenly;
+    justify-items: center;
+    padding-bottom: 1.5rem;
+    width: 100%;
+    margin: auto;
+}
+
+#skills-icons .skill {
+    background-color: #f9f9f9;
+    box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.2);
+    padding: 0.3rem;
+    border-radius: 0.6rem;
+    position: relative;
+    width: var(--icon-size);
+    text-align: center;
+}
+
+#skills-icons .skill img {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    object-fit: contain; 
+}
+
+#skills-icons .skill p {
+    position: absolute;
+    margin-top: 0.5rem;
+    width: var(--icon-size);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Flex align project containers */
+.project {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 0.9rem;
+}
+
+/* Style project item elements */
+.project-item {
+    width: 95%;
+    background: #f9f9f9;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    border: 0.1rem solid #ddd;
+    box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+
+.project-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+}
+
+/* Style the footer element */
+footer {
+    position: relative;
+    font-size: 1rem;
+    width: 100%;
+    background-color: #222222;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 1rem;
+    padding: 0.6rem 0;
+    left: 0;
+}
+
+footer p {
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+/* Media queries for larger screens (tablet view) */
+@media(min-width: 800px) {
+    /* Decrease page stretching */
+    .page-content {
+        /* Make more gradual change eventually using math? */
+        margin: auto;
+        width: 90%; 
+    }
+
+    /* Expand helpbar padding */
+    .helpbar-container {
+        padding: 1.3rem;
+    }
+
+    /* Restyle navigation links. */
+    .desktop-nav-links {
+        display: flex;
+        position: static;
+        background-color: #333333;
+        flex-direction: row;
+        align-items: center;
+        opacity: 1;
+    }
+
+    /* Hide the hamburger menu on desktop */
+    .mobile-nav-links {
+        display: none;
+    }
+
+    /* Hide the hamburger menu on desktop */
+    .hamburger {
+        display: none;
+    }
+}
+
+/* Media queries for larger screens (desktop view) */
+@media(min-width: 1000px) {
+    /* Grid align page content */
+    .page-content {
+        display: grid;
+        width: 65%;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    /* Individually align content elements */
+    .page-content > .section-container,
+    .page-content > #hero {
+        width: 100%;
+        height: 100%;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .section-container, #hero {
+        max-width: 100%;
+    }
+
+    #about {
+        margin: auto;
+        grid-column: 1 / 4;
+    }
+
+    #skills {
+        grid-column: 4 / 6;
+    }
+
+    /* Set width of each individual grid element */
+    #hero, #small-projects, #main-projects, #contact {
+        grid-column: 1 / -1;
+    }
+
+    /* Slightly adjusted font/icon sizes for desktop view */
+    .skill img {
+        width: calc(var(--icon-size) * 0.8);
+    }
+
+    #hero h2 {
+        font-size: 1.8rem;
+    }
+
+    #hero h3 {
+        font-size: 1.2rem;
+    }
+
+    #about h2 {
+        font-size: 1.7rem;
+    }
+
+    #about p {
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+    }
+
+    .section-container h2 {
+        font-size: 1.6rem;
+    }
+
+    footer p {
+        font-size: 1.1rem;
+    }
+}
