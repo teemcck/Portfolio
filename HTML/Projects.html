@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Projects</title>
+        <link rel="icon" href="../add/later" type="image/x-icon">
+        <!-- Reference Font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+        <!-- Apply Stylesheets -->
+        <link rel="stylesheet" href="../CSS/StyleReset.css">
+        <link rel="stylesheet" href="../CSS/PrimaryStyleWhite.css">
+        <link rel="stylesheet" href="../CSS/ProjectHub.css">
+    </head>
+    <body>
+        <header>
+            <div class = "helpbar-container">
+                <div class="name-display">
+                    <h1>Tristan McCaskill</h1>
+                </div>
+                <nav id="nav-container">
+                    <!-- Do not display on mobile view. -->
+                    <ul class="desktop-nav-links nav-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <button class="hamburger" aria-label="Open navigation menu">☰</button>
+                </nav> 
+            </div>
+            <!-- Do not display on desktop view. -->
+            <ul class="mobile-nav-links nav-links">
+                <li><a href="index.html/#about">About</a></li>
+                <li><a href="#index.html/#projects">Projects</a></li>
+                <li><a href="#index.html/#skills">Skills</a></li>
+                <li><a href="#index.html/#contact">Contact</a></li>
+            </ul>
+        </header>
+
+        <div id="content-container">
+            <main id="project-page-content">
+                <section id="project-hub">
+                    <h2>Browse My Games</h2>
+                    <div class="project-flex">
+                        <!-- Bubble Casino Project Tile -->
+                        <div class="project-tile">
+                            <img src="../Thumbnails/BubbleCasino.png" alt="project 1 Thumbnail" loading="lazy">
+                            <div class="tile-subtitle">
+                                <h3>Bubble Casino | 2025 Global Game Jam Submission</h3>
+                            </div>
+                            <div class="tile-content">
+                                <p>Lorem ipsum dolor, sit amet consectetur</p>
+                                <a href="https://example.com/project1" target="_blank" rel="noopener noreferrer">View Project</a>
+                            </div>
+                        </div>
+                        <!-- Protect Your Data Project Tile -->
+                        <div class="project-tile">
+                            <img src="../Thumbnails/ProtectYourData.png" alt="project 2 Thumbnail" loading="lazy">
+                            <h3>Protect Your Data | MDC Blue Bird Studios Game Jam Submission</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur</p>
+                            <a href="https://example.com/project2" target="_blank" rel="noopener noreferrer">View Project</a>
+                        </div>
+                        <!-- Block Party Tile -->
+                        <div class="project-tile">
+                            <img src="../Thumbnails/ProtectYourData.png" alt="project 2 Thumbnail" loading="lazy">
+                            <h3>Protect Your Data | MDC Blue Bird Studios Game Jam Submission</h3>
+                            <p>Lorem ipsum dolor, sit amet consectetur</p>
+                            <a href="https://example.com/project2" target="_blank" rel="noopener noreferrer">View Project</a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <div class="footer-links">
+                    <a href="https://github.com/teemcck" target="_blank" rel="noopener noreferrer">
+                        <img class="link-icon" src="../Icons/Skills/Github.svg" alt="Link to Github" loading="lazy">
+                    </a>
+                    <a href="https://www.linkedin.com/in/tristan-mccaskill-4078a4356/" target="_blank" rel="noopener noreferrer">
+                        <img class="link-icon" src="../Icons/Skills/LinkedIn.svg" alt="Link to LinkedIn" loading="lazy">
+                    </a>
+                </div>
+                <hr class="footer-divider">
+                <div class="footer-text">
+                    <p>Made from polygons & passion.</p>
+                    <p>&copy; <span id="currentYear"></span> Tristan McCaskill.</p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- JavaScript to handle the footer year dynamically. -->
+        <script src="../JavaScript/FooterYear.js"></script>
+        <!-- Iteractivity for hamburger menu mobile -->
+        <script src="../JavaScript/ToggleHamburger.js"></script>
+    </body>
+</html>

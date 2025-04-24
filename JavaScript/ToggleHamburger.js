@@ -1,3 +1,4 @@
+// Add event listener to hamburger menu.
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.mobile-nav-links');
