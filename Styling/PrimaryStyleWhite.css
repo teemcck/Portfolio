@@ -37,14 +37,24 @@ body {
 /* Bold the "Tristan McCaskill" text */
 .name-display {
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+}
+
+/* Prevent link tag from overridding styling */
+.name-display a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.name-display a:visited {
+    color: inherit;
 }
 
 /* Hamburger menu styles */
 .hamburger {
     background: none;
     color: #ffffff;
-    font-size: 2.2rem;
+    font-size: 2rem;
     display: inline;
     cursor: pointer;
 }
@@ -105,31 +115,31 @@ header {
     background: #222222;
     color: #ffffff;
     border-radius: 1rem;
-    max-width: 95%;
+    max-width: 97%;
 }
 
 #hero h2 {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 1rem;
 }
 
 #hero h3 {
     color: #cccccc;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin: 0.6rem;
 }
 
 /* Style general paragraph elements */
 p {
-    font-size: 1.1rem;
-    line-height: 1.6rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
 }
 
 /* Style the about text (slightly larger) */
 #about p {
     margin: 0.75rem 0rem;
-    line-height: 2rem;
+    line-height: 1.9rem;
 }
 
 /* Style section container class generally */
@@ -142,12 +152,12 @@ p {
     flex-direction: column;
     flex-wrap: wrap;
     padding: 1.6rem;
-    font-size: 1.3rem;
-    width: 95%;
+    font-size: 1.2rem;
+    width: 97%;
 }
 
 .section-container h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     font-weight: bold;
 }
@@ -186,7 +196,7 @@ p {
     position: absolute;
     margin-top: 0.5rem;
     width: var(--icon-size);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-align: center;
 }
 
@@ -199,9 +209,19 @@ p {
     gap: 0.9rem;
 }
 
+/* Prevent link tag from overridding styling */
+.project-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.project-item a:visited {
+    color: inherit;
+}
+
 /* Style project item elements */
 .project-item {
-    width: 95%;
+    width: 97%;
     background: #f9f9f9;
     padding: 0.6rem;
     border-radius: 1rem;
@@ -210,7 +230,7 @@ p {
 }
 
 .project-item h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-bottom: 0.6rem;
 }
 
@@ -221,7 +241,7 @@ footer {
     align-items: center;
     justify-content: center;
     position: relative;
-    font-size: 1rem;
+    font-size: 0.9rem;
     background-color: #222222;
     color: #ffffff;
     text-align: center;
@@ -230,8 +250,14 @@ footer {
     --link-img-size: 2rem;
 }
 
+/* Remove later */
+.block {
+    display: block;
+    height: 10rem;
+}
+
 footer p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #cccccc;
 }
 
@@ -265,12 +291,12 @@ footer p {
 }
 
 /* Media queries for larger screens (tablet view) */
-@media(min-width: 800px) {
+@media(min-width: 600px) {
     /* Decrease page stretching */
     #about-page-content {
         /* Make more gradual change eventually using math? */
         margin: auto;
-        width: 90%; 
+        width: min(925px, 92%);
     }
 
     /* Expand helpbar padding */
@@ -278,14 +304,42 @@ footer p {
         padding: 1.3rem;
     }
 
-    /* Restyle navigation links. */
+    /* Restyle navigation links */
     .desktop-nav-links {
+        transition: scale 0.2s ease, color 0.2 ease;
         display: flex;
+        gap: 1rem;
         position: static;
         background-color: #333333;
         flex-direction: row;
         align-items: center;
         opacity: 1;
+    }
+
+    /* Hover effect for header, managed by HeaderSelect.js */
+    /* For unfocusing elements */
+    .desktop-nav-links-unfocused {
+        transition: color 0.15s ease;
+        color: #cccccc;
+    }
+
+    /* For focusing elements */
+    .desktop-nav-links-focused {
+        transition: transform 0.15s ease;
+        transform: scale(1.1);
+    }
+
+    /* Add specificity by targeting the parent container */
+    .desktop-nav-links li.desktop-nav-links-focused a {
+        color: #f9f9f9;
+        transform: scale(1.1);
+        transition: transform 0.15s ease, color 0.15s ease;
+    }
+
+    .desktop-nav-links li.desktop-nav-links-unfocused a {
+        color: #cccccc;
+        transform: scale(1);
+        transition: transform 0.15s ease, color 0.15s ease;
     }
 
     /* Hide the hamburger menu on desktop */
@@ -300,11 +354,11 @@ footer p {
 }
 
 /* Media queries for larger screens (desktop view) */
-@media(min-width: 1000px) {
+@media(min-width: 800px) {
     /* Grid align page content */
     #about-page-content {
         display: grid;
-        width: 65%;
+        width: min(1250px, 85%);
         justify-content: center;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
@@ -341,27 +395,47 @@ footer p {
     }
 
     #hero h2 {
-        font-size: 1.8rem;
-    }
-
-    #hero h3 {
-        font-size: 1.2rem;
-    }
-
-    #about h2 {
         font-size: 1.7rem;
     }
 
-    #about p {
+    #hero h3 {
         font-size: 1.1rem;
-        line-height: 1.7rem;
     }
 
-    .section-container h2 {
+    #about h2 {
         font-size: 1.6rem;
     }
 
-    footer p {
-        font-size: 1.1rem;
+    #about p {
+        font-size: 1rem;
+        line-height: 1.6rem;
     }
+
+    .section-container h2 {
+        font-size: 1.5rem;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
+
+/* Skip to main content link */
+.skip-to-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #222222;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    z-index: 1000;
+    transform: translateY(-100%); /* Hide off-screen */
+    transition: transform 0.3s ease;
+}
+
+.skip-to-main:focus {
+    transform: translateY(0); /* Bring into view when focused */
+    outline: 2px solid #ffffff;
 }
