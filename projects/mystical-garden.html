@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mystical Garden | Tristan McCaskill</title>
+        <link rel="icon" href="../Assets/Icons/favicon/Coffee.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="../Style/StyleReset.css">
+        <link rel="stylesheet" href="../Style/PrimaryStyleWhite.css">
+        <link rel="stylesheet" href="../Style/ProjectDevlog.css">
+        <script src="../JS/ProjectTabs.js" defer></script>
+        <script type="module" src="../JS/VoidBackground.js"></script>
+    </head>
+    <body class="project-page-body">
+        <a href="#project-content" class="skip-to-main">Skip to Main Content</a>
+
+        <header>
+            <a class="back-link" href="../index.html">
+                <i class="fa-solid fa-arrow-left"></i> Back to main portfolio
+            </a>
+        </header>
+
+        <div class="shader-overlay"></div>
+
+        <main id="project-content" class="project-page-main">
+            <section class="project-page" data-project-tabs>
+                <header class="project-devlog-header">
+                    <div class="project-title-block">
+                        <p class="project-eyebrow">Devlog</p>
+                        <h1>Mystical Garden</h1>
+                        <p class="project-short-summary">
+                            A cozy farming simulator developed by me alongside the rest of my WolverineSoft Studio team.
+                        </p>
+                    </div>
+
+                    <figure class="project-cover">
+                        <img src="../Assets/Thumbnails/PlaceholderThumbnail.png" alt="Mystical Garden placeholder thumbnail">
+                    </figure>
+                </header>
+
+                <div class="project-tab-list" role="tablist" aria-label="Mystical Garden devlog sections">
+                    <button type="button" class="project-tab is-active" id="garden-overview-tab" role="tab" aria-selected="true" aria-controls="garden-overview">
+                        Overview
+                    </button>
+                    <button type="button" class="project-tab" id="garden-farming-tab" role="tab" aria-selected="false" aria-controls="garden-farming" tabindex="-1">
+                        Farming
+                    </button>
+                    <button type="button" class="project-tab" id="garden-team-tab" role="tab" aria-selected="false" aria-controls="garden-team" tabindex="-1">
+                        Team Work
+                    </button>
+                    <button type="button" class="project-tab" id="garden-notes-tab" role="tab" aria-selected="false" aria-controls="garden-notes" tabindex="-1">
+                        Notes
+                    </button>
+                </div>
+
+                <div class="project-tab-panels">
+                    <section class="project-panel is-active" id="garden-overview" role="tabpanel" aria-labelledby="garden-overview-tab">
+                        <h2>Overview</h2>
+                        <p>
+                            Placeholder overview for the Mystical Garden project.
+                        </p>
+                    </section>
+
+                    <section class="project-panel" id="garden-farming" role="tabpanel" aria-labelledby="garden-farming-tab" hidden>
+                        <p class="devlog-step">01 / Farming</p>
+                        <h2>Cozy game loop</h2>
+                        <p>Placeholder notes for crops, pacing, and player routines.</p>
+                        <ul class="project-list">
+                            <li>Placeholder crop progression</li>
+                            <li>Placeholder tool interactions</li>
+                            <li>Placeholder economy notes</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-panel" id="garden-team" role="tabpanel" aria-labelledby="garden-team-tab" hidden>
+                        <p class="devlog-step">02 / Team Work</p>
+                        <h2>Studio collaboration</h2>
+                        <p>Placeholder notes for WolverineSoft Studio collaboration and production flow.</p>
+                        <ul class="project-list">
+                            <li>Placeholder feature ownership</li>
+                            <li>Placeholder sprint notes</li>
+                            <li>Placeholder integration notes</li>
+                        </ul>
+                    </section>
+
+                    <section class="project-panel" id="garden-notes" role="tabpanel" aria-labelledby="garden-notes-tab" hidden>
+                        <p class="devlog-step">03 / Notes</p>
+                        <h2>Future updates</h2>
+                        <p>Placeholder space for screenshots, feature notes, and reflections.</p>
+                    </section>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

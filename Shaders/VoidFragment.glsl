@@ -11,15 +11,15 @@ float pixelSize = 8.0;
 float voidScale = 6.0;
 float voidSpeed = 0.005;
 float warpStrength = 0.05;
-float shimmerStrength = 0.06;
+float shimmerStrength = 0.028;
 
 // -- Color Palette --
-vec3 color0 = vec3(0.020, 0.021, 0.022);
-vec3 color1 = vec3(0.040, 0.043, 0.046);
-vec3 color2 = vec3(0.070, 0.074, 0.078);
-vec3 color3 = vec3(0.110, 0.120, 0.114);
+vec3 color0 = vec3(0.014, 0.016, 0.020);
+vec3 color1 = vec3(0.027, 0.031, 0.039);
+vec3 color2 = vec3(0.044, 0.050, 0.062);
+vec3 color3 = vec3(0.066, 0.074, 0.086);
 
-vec3 glowColor = vec3(0.130, 0.160, 0.135);
+vec3 glowColor = vec3(0.075, 0.100, 0.125);
 
 // -- Noise --
 float hash(vec2 p) {
@@ -127,7 +127,9 @@ void main() {
   col += glowColor * shimmer * voidShape * shimmerStrength;
 
   // ethereal ribbon energy
-  col += glowColor * arcs * 0.12;
+  col += glowColor * arcs * 0.055;
+
+  col *= 0.82;
 
   gl_FragColor = vec4(col, 1.0);
 }

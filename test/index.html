@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tristan McCaskill | Minimal Test</title>
+        <link rel="icon" href="../Assets/Icons/favicon/Coffee.svg" type="image/svg+xml">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="header-inner">
+                <div class="identity-block">
+                    <div class="identity-copy">
+                        <button class="site-name" type="button" data-section-target="about">Tristan McCaskill</button>
+                        <nav class="utility-links" aria-label="External links">
+                            <a href="https://github.com/teemcck" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            <a href="https://www.linkedin.com/in/tristan-mccaskill/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        </nav>
+                    </div>
+                </div>
+
+                <nav class="page-nav" aria-label="Page sections">
+                    <button type="button" class="section-button is-active" data-section-target="about">[About]</button>
+                    <button type="button" class="section-button" data-section-target="projects">[Projects]</button>
+                    <button type="button" class="section-button" data-section-target="game-jams">[Game Jams]</button>
+                    <button type="button" class="section-button" data-section-target="skills">[Skills]</button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="page-shell">
+            <section class="content-panel intro-section is-active" id="about" data-section-panel>
+                <img class="about-profile-image" src="../Assets/Profile/Tristan1.png" alt="Tristan McCaskill">
+                <div class="intro-copy">
+                    <p>
+                        Hi there! I'm Tristan, a computer science student in the LSA Honors Program at the University of Michigan.
+                        I'm deeply passionate about software engineering and videogame development. I am a member of
+                        <a href="https://wolverinesoft.org/" target="_blank" rel="noopener noreferrer">WolverineSoft</a>,
+                        a game development club, and
+                        <a href="https://michigancg.org/#home" target="_blank" rel="noopener noreferrer">Michigan Computer Graphics</a>.
+                    </p>
+                    <p>
+                        My goal is to create unique, memorable experiences through games that motivate others to explore their passions.
+                        I'm excited to see where this journey takes me, and I'd love to share that experience with you.
+                    </p>
+                </div>
+            </section>
+
+            <section class="content-panel project-index" id="projects" data-section-panel hidden>
+                <div class="project-row">
+                    <div class="project-copy">
+                        <div class="project-heading">
+                            <h2><a href="../projects/happy-home-tycoon.html">[Happy Home Tycoon]</a></h2>
+                            <span>Roblox Studio, Lua, Blender</span>
+                        </div>
+                        <p>A house of leaves inspired 'Non-Euclidian' uncanny horror game made in the Roblox Studio Engine.</p>
+                    </div>
+                    <div class="project-preview">
+                        <img src="../Assets/Thumbnails/PlaceholderThumbnail.png" alt="Happy Home Tycoon placeholder thumbnail" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="project-row">
+                    <div class="project-copy">
+                        <div class="project-heading">
+                            <h2><a href="../projects/mystical-garden.html">[Mystical Garden]</a></h2>
+                            <span>Unity, C#, Aseprite</span>
+                        </div>
+                        <p>A cozy farming simulator developed by me alongside the rest of my WolverineSoft Studio team.</p>
+                    </div>
+                    <div class="project-preview">
+                        <img src="../Assets/Thumbnails/PlaceholderThumbnail.png" alt="Mystical Garden placeholder thumbnail" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-panel project-index" id="game-jams" data-section-panel hidden>
+                <div class="project-row">
+                    <div class="project-copy">
+                        <div class="project-heading">
+                            <h2><a href="../projects/protect-your-data.html">[Protect Your Data]</a></h2>
+                            <span>Unity, C#</span>
+                        </div>
+                        <p>Topdown wavebased roguelike shooter with 3 bosses.</p>
+                    </div>
+                    <div class="project-preview">
+                        <img src="../Assets/Thumbnails/ProtectYourData.png" alt="Protect Your Data thumbnail" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="project-row">
+                    <div class="project-copy">
+                        <div class="project-heading">
+                            <h2><a href="../projects/bubble-casino.html">[Bubble Casino]</a></h2>
+                            <span>Unity, C#</span>
+                        </div>
+                        <p>Blackjack simulator... to afford your wedding?</p>
+                    </div>
+                    <div class="project-preview">
+                        <img src="../Assets/Thumbnails/BubbleCasino.png" alt="Bubble Casino thumbnail" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="project-row">
+                    <div class="project-copy">
+                        <div class="project-heading">
+                            <h2><a href="../projects/block-party.html">[Block Party]</a></h2>
+                            <span>Unity, C#</span>
+                        </div>
+                        <p>Friday night funkin' inspired rhythm game.</p>
+                    </div>
+                    <div class="project-preview">
+                        <img src="../Assets/Thumbnails/BlockParty.png" alt="Block Party thumbnail" loading="lazy">
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-panel small-section" id="skills" data-section-panel hidden>
+                <div class="skills-list" aria-label="Skill levels">
+                    <div class="content-subheading">Programming/Markup Languages</div>
+                    <div class="skill-row" style="--level: 80;">
+                        <span>C++</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>80</strong>
+                    </div>
+                    <div class="skill-row" style="--level: 80;">
+                        <span>C#</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>80</strong>
+                    </div>
+                    <div class="skill-row" style="--level: 70;">
+                        <span>C</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>70</strong>
+                    </div>
+                    <div class="skill-row" style="--level: 60;">
+                        <span>Java</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>60</strong>
+                    </div>
+                    <div class="skill-row" style="--level: 55;">
+                        <span>Python</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>55</strong>
+                    </div>
+                    <div class="skill-row" style="--level: 75;">
+                        <span>HTML</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>75</strong>
+                    </div>
+                    <div class="skill-row" style="--level: 75;">
+                        <span>CSS</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>75</strong>
+                    </div>
+                    <div class="skill-row" style="--level: 75;">
+                        <span>LaTeX</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>75</strong>
+                    </div>
+                    <div class="content-subheading content-subheading-separated">Tools, Frameworks, APIs</div>
+                    <div class="skill-row" style="--level: 80;">
+                        <span>Unity</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>80</strong>
+                    </div>
+                    <div class="skill-row" style="--level: 75;">
+                        <span>Blender</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>75</strong>
+                    </div>
+                    <div class="skill-row" style="--level: 70;">
+                        <span>Aseprite</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>70</strong>
+                    </div>
+                    <div class="skill-row" style="--level: 70;">
+                        <span>Git</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>70</strong>
+                    </div>
+                    <div class="skill-row" style="--level: 65;">
+                        <span>Make &amp; CMake</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>65</strong>
+                    </div>
+                    <div class="skill-row" style="--level: 60;">
+                        <span>OpenGL</span>
+                        <div class="skill-track"><span></span></div>
+                        <strong>60</strong>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

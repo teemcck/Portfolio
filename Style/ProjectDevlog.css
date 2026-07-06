@@ -93,7 +93,7 @@
     margin: 0;
     overflow: hidden;
     border-radius: var(--radius-small);
-    background: #10141c;
+    background: var(--project-cover-bg);
     justify-self: start;
 }
 
@@ -122,17 +122,19 @@
     min-height: 2.1rem;
     text-decoration: none;
     color: var(--text-light);
-    background: #2b3444;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: var(--radius-small);
+    background: var(--surface-bg);
+    border: 1px solid var(--surface-border);
+    border-radius: var(--radius-large);
     padding: 0.42rem 0.55rem;
     font-size: 0.86rem;
+    box-shadow: var(--surface-shadow-small);
+    backdrop-filter: blur(8px);
 }
 
 .project-action-link:hover,
 .project-action-link:focus-visible {
-    background: #37445a;
-    border-color: rgba(142, 165, 197, 0.5);
+    background: var(--surface-bg-hover);
+    border-color: var(--surface-border-strong);
     outline: none;
 }
 
@@ -150,19 +152,21 @@
     min-height: 2.15rem;
     padding: 0.45rem 0.5rem;
     color: var(--text-light);
-    background: #202735;
-    border-radius: var(--radius-small);
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: var(--surface-bg);
+    border-radius: var(--radius-large);
+    border: 1px solid var(--surface-border);
     font-size: 0.84rem;
     white-space: normal;
+    box-shadow: var(--surface-shadow-small);
+    backdrop-filter: blur(8px);
 }
 
 .project-tab:hover,
 .project-tab:focus-visible,
 .project-tab.is-active {
     color: var(--text-light);
-    background: #37445a;
-    border-color: rgba(142, 165, 197, 0.5);
+    background: var(--surface-bg-hover);
+    border-color: var(--surface-border-strong);
     outline: none;
 }
 
@@ -172,9 +176,13 @@
 
 .project-panel {
     max-width: 100%;
-    background: rgba(23, 28, 37, 0.92);
-    border-radius: var(--radius-small);
-    padding: 0.95rem;
+    box-sizing: border-box;
+    background: var(--surface-bg-soft);
+    border: 1px solid var(--surface-border-soft);
+    border-radius: var(--radius-large);
+    box-shadow: var(--surface-shadow);
+    backdrop-filter: blur(8px);
+    padding: 1.25rem 1.1rem;
 }
 
 .project-panel[hidden] {

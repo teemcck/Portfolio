@@ -5,114 +5,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tristan McCaskill</title>
         <link rel="icon" href="Assets/Icons/favicon/Coffee.svg" type="image/svg+xml">
-        <!-- Reference Font -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
-        <!-- Icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-        <!-- Apply Stylesheets -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap">
         <link rel="stylesheet" href="Style/StyleReset.css">
         <link rel="stylesheet" href="Style/PrimaryStyleWhite.css">
-        <!-- Scripts -->
         <script src="JS/NavSelect.js" defer></script>
-        <script src="JS/ShaderInfoModal.js" defer></script>
         <script type="module" src="JS/VoidBackground.js"></script>
     </head>
     <body>
         <a href="#page-content" class="skip-to-main">Skip to Main Content</a>
-        <div class="site-status-bar">Site is under construction</div>
-
-        <div class="shader-info-modal" id="shader-info-modal" data-shader-info-modal hidden>
-            <div class="shader-info-backdrop" data-shader-info-close></div>
-            <div
-                class="shader-info-dialog"
-                role="dialog"
-                aria-modal="true"
-                aria-labelledby="shader-info-title"
-            >
-                <span class="shader-info-frame-side shader-info-frame-side-top" aria-hidden="true"></span>
-                <span class="shader-info-frame-side shader-info-frame-side-right" aria-hidden="true"></span>
-                <span class="shader-info-frame-side shader-info-frame-side-bottom" aria-hidden="true"></span>
-                <span class="shader-info-frame-side shader-info-frame-side-left" aria-hidden="true"></span>
-                <span class="shader-info-frame-corner shader-info-frame-corner-top-left" aria-hidden="true"></span>
-                <span class="shader-info-frame-corner shader-info-frame-corner-top-right" aria-hidden="true"></span>
-                <span class="shader-info-frame-corner shader-info-frame-corner-bottom-right" aria-hidden="true"></span>
-                <span class="shader-info-frame-corner shader-info-frame-corner-bottom-left" aria-hidden="true"></span>
-
-                <div class="shader-info-scroll">
-                    <div class="shader-info-header">
-                        <div>
-                            <h2 id="shader-info-title">Background Shader</h2>
-                            <p>
-                                The background is a GLSL fragment shader rendered through Three.js. The shader animates layered noise,
-                                pixelation, and color blending directly on the GPU.
-                            </p>
-                        </div>
-                        <button type="button" class="shader-info-close" data-shader-info-close aria-label="Close background info">
-                            <span class="shader-info-close-label" aria-hidden="true">X</span>
-                        </button>
-                    </div>
-
-                    <div class="shader-info-content">
-                        <div class="shader-info-copy">
-                            <h3>How it works</h3>
-                            <p>
-                                A full-screen plane is drawn behind the site. The fragment shader computes each pixel color in real time
-                                using time, resolution, and noise-based warping from the local GLSL source file.
-                            </p>
-                        </div>
-                        <div class="shader-code-panel">
-                            <div class="shader-code-label">Pulled from <code>Shaders/VoidFragment.glsl</code></div>
-                            <pre class="shader-code-block"><code data-shader-code>Loading shader source...</code></pre>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="shader-overlay"></div>
-
-        <div class="page-top-linkbar">
-            <button
-                type="button"
-                class="shader-info-trigger"
-                data-shader-info-open
-                aria-haspopup="dialog"
-                aria-controls="shader-info-modal"
-            >
-                What is this background?
-            </button>
-        </div>
+        <div class="site-status-bar">Site is under construction...</div>
 
         <div id="content-container">
             <main id="page-content">
                 <section id="hero">
                     <div class="hero-text">
                         <h1>Tristan McCaskill</h1>
-                        <h2>Game Developer | Software Engineer</h2>
-                        <div class="hero-icons">
-                            <a target="_blank" href="https://www.linkedin.com/in/tristan-mccaskill/">
-                                <i class="fa-brands fa-linkedin hero-icon" aria-label="LinkedIn"></i>
-                            </a>
-                            <a target="_blank" href="https://github.com/teemcck">
-                                <i class="fa-brands fa-github hero-icon" aria-label="GitHub"></i>
-                            </a>
+                        <h2>Game Developer & Software Engineer</h2>
+                        <div class="hero-links">
+                            <a target="_blank" href="https://github.com/teemcck" rel="noopener noreferrer">> GitHub</a>
+                            <a target="_blank" href="https://www.linkedin.com/in/tristan-mccaskill/" rel="noopener noreferrer">> LinkedIn</a>
                         </div>
                     </div>
-                </section>
 
-                <div class="divider">
-                    <div class="divider-left"></div>
-                    <div class="divider-mid"></div>
-                    <div class="divider-right"></div>
-                </div>
-
-                <section id="nav-bar">
-                    <ul class="nav-links">
-                        <li><a class="desktop-link" data-target="about"><i class="fa-solid fa-user"></i> About</a></li>
-                        <li><a class="desktop-link" data-target="projects"><i class="fa-solid fa-gamepad"></i> Projects</a></li>
-                        <li><a class="desktop-link" data-target="skills"><i class="fa-solid fa-code"></i> Skills</a></li>
-                        <li><a class="desktop-link" data-target="contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-                    </ul>
+                    <nav id="nav-bar" aria-label="Page sections">
+                        <ul class="nav-links">
+                            <li><a href="#about" class="desktop-link active" data-target="about">[About]</a></li>
+                            <li><a href="#projects" class="desktop-link" data-target="projects">[Projects]</a></li>
+                            <li><a href="#game-jams" class="desktop-link" data-target="game-jams">[Game Jams]</a></li>
+                            <li><a href="#skills" class="desktop-link" data-target="skills">[Skills]</a></li>
+                        </ul>
+                    </nav>
                 </section>
 
                 <div class="divider">
@@ -145,69 +67,69 @@
                 </div>
 
                 <!-- Skills -->
-                <div class="section-container" id="skills">
+                <div class="section-container" id="skills" hidden>
                     <h2>Skills</h2>
                     <div class="skills-description">Below, you may find my self evaluated skill levels.</div>
                     <div class="skills-container">
                         <div class="language-skills">
                             <div class="skill-subject">Programming/Markup Languages</div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 80;"><i class="fa-solid fa-file-code"></i> C++</div>
+                                <div class="skill-metric" style="--level: 80;">C++</div>
                                 <span class="skill-metric-value">80</span>
                             </div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 80;"><i class="fa-solid fa-file-code"></i> C#</div>
+                                <div class="skill-metric" style="--level: 80;">C#</div>
                                 <span class="skill-metric-value">80</span>
                             </div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 75;"><i class="fa-solid fa-scroll"></i> LaTeX</div>
+                                <div class="skill-metric" style="--level: 75;">LaTeX</div>
                                 <span class="skill-metric-value">75</span>
                             </div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 75;"><i class="fa-brands fa-html5"></i> HTML</div>
+                                <div class="skill-metric" style="--level: 75;">HTML</div>
                                 <span class="skill-metric-value">75</span>
                             </div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 75;"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+                                <div class="skill-metric" style="--level: 75;">CSS</div>
                                 <span class="skill-metric-value">75</span>
                             </div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 70;"><i class="fa-solid fa-c"></i> C</div>
+                                <div class="skill-metric" style="--level: 70;">C</div>
                                 <span class="skill-metric-value">70</span>
                             </div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 60;"><i class="fa-brands fa-java"></i> Java</div>
+                                <div class="skill-metric" style="--level: 60;">Java</div>
                                 <span class="skill-metric-value">60</span>
                             </div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 55;"><i class="fa-brands fa-python"></i> Python</div>
+                                <div class="skill-metric" style="--level: 55;">Python</div>
                                 <span class="skill-metric-value">55</span>
                             </div>
                         </div>
                         <div class="tool-skills">
                             <div class="skill-subject">Tools, Frameworks, APIs</div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 80;"><i class="fa-solid fa-unity"></i> Unity</div>
+                                <div class="skill-metric" style="--level: 80;">Unity</div>
                                 <span class="skill-metric-value">80</span>
                             </div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 75;"><i class="fa-solid fa-cube"></i> Blender</div>
+                                <div class="skill-metric" style="--level: 75;">Blender</div>
                                 <span class="skill-metric-value">75</span>
                             </div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 70;"><i class="fa-solid fa-pen-nib"></i> Aseprite</div>
+                                <div class="skill-metric" style="--level: 70;">Aseprite</div>
                                 <span class="skill-metric-value">70</span>
                             </div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 70;"><i class="fa-brands fa-git-alt"></i> Git</div>
+                                <div class="skill-metric" style="--level: 70;">Git</div>
                                 <span class="skill-metric-value">70</span>
                             </div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 65;"><i class="fa-solid fa-gear"></i> Make &amp; CMake</div>
+                                <div class="skill-metric" style="--level: 65;">Make &amp; CMake</div>
                                 <span class="skill-metric-value">65</span>
                             </div>
                             <div class="skill-metric-container">
-                                <div class="skill-metric" style="--level: 60;"><i class="fa-solid fa-display"></i> OpenGL</div>
+                                <div class="skill-metric" style="--level: 60;">OpenGL</div>
                                 <span class="skill-metric-value">60</span>
                             </div>
                         </div>
@@ -215,85 +137,78 @@
                 </div>
 
                 <!-- Projects -->
-                <section class="section-container" id="projects">
+                <section class="section-container" id="projects" hidden>
                     <h2>Projects</h2>
                     <div class="projects-container">
-                        <a class="project-card-link" href="projects/protect-your-data.html" aria-label="Open Protect Your Data project documentation">
-                            <div class="project-item">
-                                <div class="project-content">
-                                    <div class="thumbnail-wrapper">
-                                        <img class="project-thumbnail" src="Assets/Thumbnails/ProtectYourData.png" alt="Protect Your Data Thumbnail" loading="lazy">
-                                        <div class="thumbnail-title">
-                                            <h3 class="project-title">Protect Your Data</h3>
-                                            <div class="thumbnail-subtitle">
-                                                Topdown wavebased roguelike shooter with 3 bosses.
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="project-card-link">
+                            <div class="project-copy">
+                                <div class="project-heading">
+                                    <h3><a href="projects/happy-home-tycoon.html">[Happy Home Tycoon]</a></h3>
+                                    <span>Roblox Studio, Lua, Blender</span>
                                 </div>
+                                <p>A house of leaves inspired 'Non-Euclidian' uncanny horror game made in the Roblox Studio Engine.</p>
                             </div>
-                        </a>
+                            <div class="project-preview">
+                                <img class="project-thumbnail" src="Assets/Thumbnails/PlaceholderThumbnail.png" alt="Happy Home Tycoon Thumbnail" loading="lazy">
+                            </div>
+                        </div>
 
-                        <a class="project-card-link" href="projects/bubble-casino.html" aria-label="Open Bubble Casino project documentation">
-                            <div class="project-item">
-                                <div class="project-content">
-                                    <div class="thumbnail-wrapper">
-                                        <img class="project-thumbnail" src="Assets/Thumbnails/BubbleCasino.png" alt="Bubble Casino Thumbnail" loading="lazy">
-                                        <div class="thumbnail-title">
-                                            <h3 class="project-title">Bubble Casino</h3>
-                                            <div class="thumbnail-subtitle">
-                                                Blackjack simulator... to afford your wedding?
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div class="project-card-link">
+                            <div class="project-copy">
+                                <div class="project-heading">
+                                    <h3><a href="projects/mystical-garden.html">[Mystical Garden]</a></h3>
+                                    <span>Unity, C#</span>
                                 </div>
+                                <p>A cozy farming simulator developed by me alongside the rest of my WolverineSoft Studio team.</p>
                             </div>
-                        </a>
-
-                        <a class="project-card-link" href="projects/block-party.html" aria-label="Open Block Party project documentation">
-                            <div class="project-item">
-                                <div class="project-content">
-                                    <div class="thumbnail-wrapper">
-                                        <img class="project-thumbnail" src="Assets/Thumbnails/BlockParty.png" alt="Block Party Thumbnail" loading="lazy">
-                                        <div class="thumbnail-title">
-                                            <h3 class="project-title">Block Party</h3>
-                                            <div class="thumbnail-subtitle">
-                                                Friday night funkin' inspired rhythm game.
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="project-preview">
+                                <img class="project-thumbnail" src="Assets/Thumbnails/PlaceholderThumbnail.png" alt="Mystical Garden Thumbnail" loading="lazy">
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </section>
 
-                <!-- Contact -->
-                <section class="section-container" id="contact">
-                    <h2>Contact Me</h2>
-                    <div id="contact-form">
-                        <form
-                            action="https://formspree.io/f/xyzpplan"
-                            method="POST"
-                        >
-                            <label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    placeholder="Your email address"
-                                    required
-                                    autocomplete="email"
-                                >
-                            </label>
-                            <label>
-                                <textarea
-                                    name="message"
-                                    placeholder="Your message"
-                                    required
-                                ></textarea>
-                            </label>
-                            <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
-                        </form>
+                <section class="section-container" id="game-jams" hidden>
+                    <h2>Game Jams</h2>
+                    <div class="projects-container">
+                        <div class="project-card-link">
+                            <div class="project-copy">
+                                <div class="project-heading">
+                                    <h3><a href="projects/protect-your-data.html">[Protect Your Data]</a></h3>
+                                    <span>Unity, C#</span>
+                                </div>
+                                <p>Topdown wavebased roguelike shooter with 3 bosses.</p>
+                            </div>
+                            <div class="project-preview">
+                                <img class="project-thumbnail" src="Assets/Thumbnails/ProtectYourData.png" alt="Protect Your Data Thumbnail" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="project-card-link">
+                            <div class="project-copy">
+                                <div class="project-heading">
+                                    <h3><a href="projects/bubble-casino.html">[Bubble Casino]</a></h3>
+                                    <span>Unity, C#</span>
+                                </div>
+                                <p>Blackjack simulator... to afford your wedding?</p>
+                            </div>
+                            <div class="project-preview">
+                                <img class="project-thumbnail" src="Assets/Thumbnails/BubbleCasino.png" alt="Bubble Casino Thumbnail" loading="lazy">
+                            </div>
+                        </div>
+
+                        <div class="project-card-link">
+                            <div class="project-copy">
+                                <div class="project-heading">
+                                    <h3><a href="projects/block-party.html">[Block Party]</a></h3>
+                                    <span>Unity, C#</span>
+                                </div>
+                                <p>Friday night funkin' inspired rhythm game.</p>
+                            </div>
+                            <div class="project-preview">
+                                <img class="project-thumbnail" src="Assets/Thumbnails/BlockParty.png" alt="Block Party Thumbnail" loading="lazy">
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
